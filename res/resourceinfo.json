@@ -1,0 +1,69 @@
+{
+        "username": "ee6e8c33-040e-4681-b167-478144f0858b",
+        "privateCert": "/v1/media/5487022018-06-03_12-39-30/5487022018-06-03_12-39-30_privatekey.pem",
+        "myqnapcloudHost": "Not Available",
+        "clientId": "raspberyPi_1528627907",
+        "clientCert": "/v1/media/5487022018-06-03_12-39-30/5487022018-06-03_12-39-30_certificate.pem",
+        "host": [
+            "192.168.1.10"
+        ],
+        "caCert": "/v1/media/ca-crt.pem",
+        "password": "r:4648f0138864bef69ec44f2e0a9bb8ac",
+        "port": 28883,
+        "resources": [
+            {
+                "description": "",
+                "datatype": "Float",
+                "resourceid": "temp",
+                "topic": "qiot/things/admin/raspberyPi/temp",
+                "resourcename": "temp",
+                "resourcetypename": "Temperature",
+                "unit": "°C"
+            },
+            {
+                "description": "Switch to control the plug",
+                "datatype": "Boolean",
+                "resourceid": "powerSwitch",
+                "topic": "qiot/things/admin/raspberyPi/powerSwitch",
+                "resourcename": "powerSwitch",
+                "resourcetypename": "Custom Sensor(Boolean)",
+                "unit": ""
+            },
+            {
+                "description": "Current Meter",
+                "datatype": "Float",
+                "resourceid": "current",
+                "topic": "qiot/things/admin/raspberyPi/current",
+                "resourcename": "current",
+                "resourcetypename": "Custom Sensor(Float)",
+                "unit": "A"
+            },
+            {
+                "description": "Voltage meter",
+                "datatype": "Float",
+                "resourceid": "voltage",
+                "topic": "qiot/things/admin/raspberyPi/voltage",
+                "resourcename": "voltage",
+                "resourcetypename": "Custom Sensor(Float)",
+                "unit": "V"
+            },
+            {
+                "description": "Button",
+                "datatype": "Boolean",
+                "resourceid": "button1",
+                "topic": "qiot/things/admin/raspberyPi/button1",
+                "resourcename": "button1",
+                "resourcetypename": "Button",
+                "unit": ""
+            },
+            {
+                "description": "Button",
+                "datatype": "Boolean",
+                "resourceid": "button2",
+                "topic": "qiot/things/admin/raspberyPi/button2",
+                "resourcename": "button2",
+                "resourcetypename": "Button",
+                "unit": ""
+            }
+        ]
+}

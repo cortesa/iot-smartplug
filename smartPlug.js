@@ -10,21 +10,6 @@ function getRandomInt (min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-/**
- * Send data to QIoT Suite Lite.
- * content of ./res/resourceinfo.json
- * {
- *     ...
- *     "resources": [
- *         {
- *              ...
- *              "resourceid": "temp",
- *              "topic": "qiot/things/admin/abccccc/temp",
- *              ...
- *          }
- *      ]
- *  }
- */
 connection.on('connect', function(data) {
     setInterval(function() {
         // TODO: you could replace "temp" by any resource id set form QIoT Suite Lite
@@ -34,6 +19,21 @@ connection.on('connect', function(data) {
         // TODO: you could replace "qiot/things/admin/edison/temp" by any Topic form QIoT Suite Lite like following
         // connection.publishByTopic("qiot/things/admin/edison/temp", getRandomInt(0, 50));
     }, 1000);
+    // TODO: you could replace "temp" by any resource id set form QIoT Suite Lite
+    connection.subscribeById('powerSwitch');
 });
+
+connection.on('message', function(data) {
+    switch (data.id) {
+        case 'powerSwitch':
+            console.log('------------------------')
+            console.log('powerSwitch : ' + data.message.value);
+            console.log('------------------------')
+            break;
+        default:
+            break;
+    }
+});
+
 
 connection.connect(connection_option);
